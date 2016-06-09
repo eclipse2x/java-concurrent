@@ -1,10 +1,11 @@
 package thread.status.interrupt;
 
 /**
- *  调用 interrupt 将会中断线程的睡眠
+ *  调用 interrupt() 将会中断处于 sleep(), 或者 wait() 或者 join() 的线程，被打断的线程会收到
+ *  一个 InterruptedException, 但是如果对处于 Running 状态的线程调用此方法需要配合 isInterrupted() 来处理
  * @author eclipse
  */
-public class SleepInterrupt {
+public class ThreadInterrupt {
 	public static void main(String[] args) {
 		MyThread thread = new MyThread();
 		thread.start();
