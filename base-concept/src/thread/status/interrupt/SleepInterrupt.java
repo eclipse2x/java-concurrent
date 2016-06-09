@@ -1,5 +1,9 @@
 package thread.status.interrupt;
 
+/**
+ *  调用 interrupt 将会中断线程的睡眠
+ * @author eclipse
+ */
 public class SleepInterrupt {
 	public static void main(String[] args) {
 		MyThread thread = new MyThread();
